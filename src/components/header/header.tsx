@@ -25,18 +25,12 @@ const Header: React.FC = () => {
           </Link>
           
           <nav className={styles.nav}>
-            <Link href="/" className={styles.navLink}>
-              Home
-            </Link>
-            <Link href="/products" className={styles.navLink}>
-              Products
-            </Link>
             <button 
               className={styles.cartButton}
               onClick={() => setIsCartOpen(true)}
             >
               <img 
-                src="/icons/light-basket.svg" 
+                src="/icons/dark-basket.svg" 
                 alt="Cart" 
                 className={styles.cartIcon}
               />

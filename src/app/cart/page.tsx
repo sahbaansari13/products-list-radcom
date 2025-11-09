@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import MainLayout from '@/layouts/MainLayout';
 import { useAppSelector } from '@/hooks/useCart';
 import CartItem from '@/components/cart/CartItem';
@@ -8,7 +9,12 @@ import CartSummary from '@/components/cart/CartSummary';
 import styles from './cart.module.css';
 
 export default function CartPage() {
+  const router = useRouter();
   const { items } = useAppSelector((state) => state.cart);
+
+  const handleCheckout = () => {
+    router.push('/summary');
+  };
 
   if (items.length === 0) {
     return (
@@ -37,7 +43,7 @@ export default function CartPage() {
             </div>
             
             <div className={styles.summarySection}>
-              <CartSummary />
+              <CartSummary onCheckout={handleCheckout} />
             </div>
           </div>
         </div>

@@ -1,77 +1,122 @@
-.cartSummary {
+.summaryCard {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 30px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  width: 100%;
+  max-width: 544px;
+}
+
+.cardTitle {
+  width: 100%;
+  height: 16px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.3125px;
+  color: #0A0A0A;
+}
+
+.checkoutForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
   gap: 24px;
+  width: 100%;
+  height: 630px;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
   width: 100%;
 }
 
-.title {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 30px;
-  letter-spacing: -0.449219px;
-  color: #0A0A0A;
-  margin: 0;
-}
-
-.emptyMessage {
-  font-family: 'Inter', sans-serif;
+.heading3 {
+  width: 100%;
+  height: 24px;
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.3125px;
-  color: #4A5565;
-  margin: 0;
+  color: #0A0A0A;
 }
 
-.summary {
+.inputGroup {
   display: flex;
   flex-direction: column;
-  padding: 17px 0 0;
-  gap: 16px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
 }
 
-.summaryRow {
+.inputRow {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  gap: 16px;
   width: 100%;
-  height: 24px;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  flex: 1;
 }
 
 .label {
-  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 100%;
+  height: 14px;
+  margin-bottom: 8px;
+  font-family: 'Inter';
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.3125px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: -0.150391px;
   color: #0A0A0A;
 }
 
-.value {
-  font-family: 'Inter', sans-serif;
+.input {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 12px;
+  width: 100%;
+  height: 36px;
+  background: #F3F3F5;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.3125px;
-  color: #0A0A0A;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.150391px;
+  color: #717182;
 }
 
-.shippingValue {
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.3125px;
-  color: #00A63E;
+.input::placeholder {
+  color: #717182;
 }
 
 .divider {
@@ -80,8 +125,167 @@
   background: rgba(0, 0, 0, 0.1);
 }
 
+.checkoutButton {
+  width: 100%;
+  height: 40px;
+  background: #030213;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.150391px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orderSummaryCard {
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  padding: 24px;
+  width: 100%;
+  max-width: 544px;
+}
+
+.orderSummaryTitle {
+  width: 100%;
+  height: 16px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.3125px;
+  color: #0A0A0A;
+  margin-bottom: 24px;
+}
+
+.orderItems {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.orderItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+  width: 100%;
+  height: 64px;
+}
+
+.itemImage {
+  width: 64px;
+  height: 64px;
+  background: #F3F4F6;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4px;
+  flex: 1;
+}
+
+.itemName {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.3125px;
+  color: #0A0A0A;
+}
+
+.itemQuantity {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.150391px;
+  color: #4A5565;
+}
+
+.itemPrice {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.3125px;
+  color: #0A0A0A;
+}
+
+.priceBreakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.priceRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+  height: 24px;
+}
+
+.priceLabel {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.3125px;
+  color: #0A0A0A;
+}
+
+.priceValue {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.3125px;
+  color: #0A0A0A;
+}
+
+.shippingFree {
+  color: #00A63E;
+}
+
+.totalRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+  height: 32px;
+}
+
 .totalLabel {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -91,7 +295,7 @@
 }
 
 .totalValue {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
@@ -100,35 +304,50 @@
   color: #0A0A0A;
 }
 
-.checkoutButton {
-  width: 100%;
-  height: 40px;
-  background: #030213;
+.backButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  width: 143px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid #0A0A0A;
   border-radius: 8px;
-  border: none;
-  color: #FFFFFF;
-  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: -0.150391px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+  color: #0A0A0A;
 }
 
-.checkoutButton:hover {
-  background: #1a1a2e;
+.backIcon {
+  width: 16px;
+  height: 16px;
+  position: relative;
 }
 
-@media (max-width: 768px) {
-  .title {
-    font-size: 18px;
-    line-height: 24px;
-  }
-  
-  .totalValue {
-    font-size: 20px;
-    line-height: 28px;
-  }
+.backIcon::before,
+.backIcon::after {
+  content: '';
+  position: absolute;
+  border: 1.33333px solid #0A0A0A;
+}
+
+.backIcon::before {
+  left: 20.83%;
+  right: 50%;
+  top: 20.83%;
+  bottom: 20.83%;
+}
+
+.backIcon::after {
+  left: 20.83%;
+  right: 20.83%;
+  top: 50%;
+  bottom: 50%;
 }

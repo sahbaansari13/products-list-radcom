@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { CartItem as CartItemType } from '@/types';
 import { useAppDispatch } from '@/hooks/useCart';

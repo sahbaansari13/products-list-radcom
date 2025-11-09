@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { useAppSelector } from '@/hooks/useCart';
 import CartItem from './CartItem';
@@ -12,15 +14,13 @@ interface CartSidebarProps {
 const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose }) => {
   const { items } = useAppSelector((state) => state.cart);
 
+  if (!isOpen) return null;
+
   return (
     <>
-      {/* Overlay */}
-      {isOpen && (
-        <div className={styles.overlay} onClick={onClose} />
-      )}
+      <div className={styles.overlay} onClick={onClose} />
       
-      {/* Sidebar */}
-      <div className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
+      <div className={`${styles.sidebar} ${styles.open}`}>
         <div className={styles.sidebarHeader}>
           <h2 className={styles.title}>
             Shopping Cart ({items.reduce((sum, item) => sum + item.quantity, 0)} items)
