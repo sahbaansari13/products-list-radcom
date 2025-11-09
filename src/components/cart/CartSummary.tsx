@@ -14,15 +14,15 @@ const CartSummary: React.FC<CartSummaryProps> = ({ onCheckout }) => {
   const { items, total } = useAppSelector((state) => state.cart);
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
   
-  const shipping = 0;
-  const tax = total * 0.1;
+  const shipping = 0; // Free shipping
+  const tax = total * 0.1; // 10% tax
   const finalTotal = total + shipping + tax;
 
   const handleCheckout = () => {
     if (onCheckout) {
-      onCheckout();
+      onCheckout(); // بستن سایدبار (اگر از سایدبار استفاده میشه)
     }
-    router.push('/summary');
+    router.push('/summary'); // هدایت به صفحه summary
   };
 
   if (items.length === 0) {

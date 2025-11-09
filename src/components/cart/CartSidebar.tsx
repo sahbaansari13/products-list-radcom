@@ -14,6 +14,15 @@ interface CartSidebarProps {
 const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose }) => {
   const { items } = useAppSelector((state) => state.cart);
 
+  // دیباگ log
+  React.useEffect(() => {
+    console.log('🛒 CartSidebar Debug:', {
+      isOpen,
+      itemsCount: items.length,
+      items
+    });
+  }, [isOpen, items]);
+
   if (!isOpen) return null;
 
   return (

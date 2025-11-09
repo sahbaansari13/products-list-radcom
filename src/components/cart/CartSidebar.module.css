@@ -11,7 +11,7 @@
 .sidebar {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: -512px;
   width: 512px;
   height: 100vh;
   background: #FFFFFF;
@@ -94,5 +94,10 @@
 @media (max-width: 768px) {
   .sidebar {
     width: 100%;
+    right: -100%;
+  }
+  
+  .sidebar.open {
+    right: 0;
   }
 }
